@@ -17,6 +17,8 @@ import { SmallInput } from "../../components/SmallInput";
 import { TextArea } from "../../components/TextArea";
 import { theme } from "../../global/styles/theme";
 import { styles } from "./styles";
+import { ModalView } from "../../components/ModalView";
+import { Guilds } from "../Guilds";
 
 export function AppointmentCreate() {
   const [category, setCategory] = useState("");
@@ -93,6 +95,10 @@ export function AppointmentCreate() {
           </View>
         </Background>
       </ScrollView>
+
+      <ModalView>
+        <Guilds />
+      </ModalView>
     </KeyboardAvoidingView>
   );
 }
