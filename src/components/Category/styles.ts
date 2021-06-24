@@ -29,7 +29,7 @@ export const styles = StyleSheet.create({
     height: 12,
     backgroundColor: theme.colors.secondary100,
     alignSelf: "flex-end",
-    marginRight: 7,
+    marginRight: 3,
     borderColor: theme.colors.secondary50,
     borderWidth: 2,
     borderRadius: 3,
@@ -40,7 +40,6 @@ export const styles = StyleSheet.create({
     backgroundColor: theme.colors.primary,
     alignSelf: "flex-end",
     marginRight: 7,
-
     borderRadius: 3,
   },
 });

@@ -5,6 +5,12 @@ export const styles = StyleSheet.create({
     minHeight: 120,
     maxHeight: 120,
     paddingLeft: 24,
+  },
+  content: {
+    marginTop: 42,
+  },
+  matches: {
     marginTop: 24,
+    marginLeft: 24,
   },
 });
