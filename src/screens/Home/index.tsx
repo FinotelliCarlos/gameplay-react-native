@@ -17,7 +17,7 @@ export function Home() {
       id: "1",
       guild: {
         id: "1",
-        name: "Lendários",
+        name: "Rumo ao global",
         icon: null,
         owner: true,
       },
@@ -30,7 +30,7 @@ export function Home() {
       id: "2",
       guild: {
         id: "1",
-        name: "Lendários",
+        name: "Rumo ao global",
         icon: null,
         owner: true,
       },
