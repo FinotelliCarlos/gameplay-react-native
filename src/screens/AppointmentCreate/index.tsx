@@ -1,22 +1,22 @@
-import React, { useState } from "react";
-import { styles } from "./styles";
-import { theme } from "../../global/styles/theme";
-import { Background } from "../../components/Background";
-import { Header } from "../../components/Header";
-import {
-  View,
-  Text,
-  ScrollView,
-  Platform,
-  KeyboardAvoidingView,
-} from "react-native";
-import { CategorySelect } from "../../components/CategorySelect";
-import { RectButton, RectButtonProps } from "react-native-gesture-handler";
 import { Feather } from "@expo/vector-icons";
+import React, { useState } from "react";
+import {
+  KeyboardAvoidingView,
+  Platform,
+  ScrollView,
+  Text,
+  View,
+} from "react-native";
+import { RectButton } from "react-native-gesture-handler";
+import { Background } from "../../components/Background";
+import { Button } from "../../components/Button";
+import { CategorySelect } from "../../components/CategorySelect";
 import { GuildIcon } from "../../components/GuildIcon";
+import { Header } from "../../components/Header";
 import { SmallInput } from "../../components/SmallInput";
 import { TextArea } from "../../components/TextArea";
-import { Button } from "../../components/Button";
+import { theme } from "../../global/styles/theme";
+import { styles } from "./styles";
 
 export function AppointmentCreate() {
   const [category, setCategory] = useState("");
