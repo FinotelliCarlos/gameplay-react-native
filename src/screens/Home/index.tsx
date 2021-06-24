@@ -39,19 +39,6 @@ export function Home() {
       description:
         "É hoje que vamos chegar ao challenger sem perder uma partida da md10",
     },
-    {
-      id: "3",
-      guild: {
-        id: "1",
-        name: "Lendários",
-        icon: null,
-        owner: true,
-      },
-      category: "1",
-      date: "22/06 ás 20:40h",
-      description:
-        "É hoje que vamos chegar ao challenger sem perder uma partida da md10",
-    },
   ];
 
   function handleCategorySelected(categoryId: string) {
