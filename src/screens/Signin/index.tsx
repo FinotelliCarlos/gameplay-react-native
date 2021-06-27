@@ -7,7 +7,7 @@ import { theme } from "../../global/styles/theme";
 import { useAuth } from "../../hooks/auth";
 import { styles } from "./styles";
 
-export function Signin() {
+export function SignIn() {
   const { loading, sighIn } = useAuth();
 
   async function handleSignIn() {
