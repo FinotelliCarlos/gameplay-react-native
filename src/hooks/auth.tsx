@@ -1,4 +1,5 @@
 import React, { createContext, ReactNode, useContext, useState } from "react";
+import * as AuthSession from "expo-auth-session";
 
 type User = {
   id: string;
@@ -21,6 +22,16 @@ export const AuthContext = createContext({} as AuthContextData);
 
 function AuthProvider({ children }: AuthProviderProps) {
   const [user, setUser] = useState<User>({} as User);
+  const [loading, setLoading] = useState(false);
+
+  function SighIn() {
+    try {
+      setLoading(true);
+      AuthSession
+        .startAsync({authUrl})
+        
+    } catch (error) {}
+  }
 
   return (
     <AuthContext.Provider value={{ user }}>{children}</AuthContext.Provider>
