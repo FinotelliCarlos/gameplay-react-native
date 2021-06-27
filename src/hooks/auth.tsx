@@ -36,17 +36,13 @@ function AuthProvider({ children }: AuthProviderProps) {
   async function sighIn() {
     try {
       setLoading(true);
-      const authUrl = `
-        ${api.defaults.baseURL}
-        /oauth2/authorize?client_id=${CLIENT_ID}
-        &redirect_uri=${REDIRECT_URI}
-        &response_type=${RESPONSE_TYPE}
-        &scope=${SCOPE}
-      `;
+      const authUrl = `${api.defaults.baseURL}/oauth2/authorize?client_id=${CLIENT_ID}&redirect_uri=${REDIRECT_URI}&response_type=${RESPONSE_TYPE}&scope=${SCOPE}`;
 
-      console.log(authUrl);
-      AuthSession.startAsync({ authUrl });
-    } catch (error) {}
+      const response = await AuthSession.startAsync({ authUrl });
+      console.log(response);
+    } catch {
+      throw new Error("Não foi possivel logar.");
+    }
   }
 
   return (

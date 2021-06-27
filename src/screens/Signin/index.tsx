@@ -1,5 +1,5 @@
 import React from "react";
-import { Image, Text, View } from "react-native";
+import { Alert, Image, Text, View } from "react-native";
 import illustration from "../../assets/illustration.png";
 import { Background } from "../../components/Background";
 import { ButtonIcon } from "../../components/ButtonIcon";
@@ -9,7 +9,13 @@ import { styles } from "./styles";
 export function Signin() {
   const { user, sighIn } = useAuth();
 
-  function handleSignIn() {}
+  async function handleSignIn() {
+    try {
+      await sighIn();
+    } catch (error) {
+      Alert.alert(error);
+    }
+  }
 
   return (
     <Background>
