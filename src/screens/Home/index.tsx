@@ -43,84 +43,6 @@ export function Home() {
       description:
         "É hoje que vamos chegar ao challenger sem perder uma partida da md10",
     },
-    {
-      id: "3",
-      guild: {
-        id: "1",
-        name: "Rumo ao global",
-        icon: null,
-        owner: true,
-      },
-      category: "1",
-      date: "22/06 ás 20:40h",
-      description:
-        "É hoje que vamos chegar ao challenger sem perder uma partida da md10",
-    },
-    {
-      id: "4",
-      guild: {
-        id: "1",
-        name: "Rumo ao global",
-        icon: null,
-        owner: true,
-      },
-      category: "1",
-      date: "22/06 ás 20:40h",
-      description:
-        "É hoje que vamos chegar ao challenger sem perder uma partida da md10",
-    },
-    {
-      id: "5",
-      guild: {
-        id: "1",
-        name: "Rumo ao global",
-        icon: null,
-        owner: true,
-      },
-      category: "1",
-      date: "22/06 ás 20:40h",
-      description:
-        "É hoje que vamos chegar ao challenger sem perder uma partida da md10",
-    },
-    {
-      id: "6",
-      guild: {
-        id: "1",
-        name: "Rumo ao global",
-        icon: null,
-        owner: true,
-      },
-      category: "1",
-      date: "22/06 ás 20:40h",
-      description:
-        "É hoje que vamos chegar ao challenger sem perder uma partida da md10",
-    },
-    {
-      id: "7",
-      guild: {
-        id: "1",
-        name: "Rumo ao global",
-        icon: null,
-        owner: true,
-      },
-      category: "1",
-      date: "22/06 ás 20:40h",
-      description:
-        "É hoje que vamos chegar ao challenger sem perder uma partida da md10",
-    },
-    {
-      id: "8",
-      guild: {
-        id: "1",
-        name: "Rumo ao global",
-        icon: null,
-        owner: true,
-      },
-      category: "1",
-      date: "22/06 ás 20:40h",
-      description:
-        "É hoje que vamos chegar ao challenger sem perder uma partida da md10",
-    },
   ];
 
   function handleCategorySelected(categoryId: string) {
@@ -153,6 +75,9 @@ export function Home() {
           <Appointment onPress={handleAppointmentDetails} data={item} />
         )}
         ItemSeparatorComponent={() => <ListDivider />}
+        contentContainerStyle={{
+          paddingBottom: 69,
+        }}
         style={styles.matches}
         showsHorizontalScrollIndicator={false}
       />
