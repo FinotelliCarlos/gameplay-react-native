@@ -9,7 +9,7 @@ import {
 import AppLoading from "expo-app-loading";
 import { Routes } from "./src/routes";
 import { Background } from "./src/components/Background";
-import { AuthContext } from "./src/hooks/auth";
+import { AuthProvider } from "./src/hooks/auth";
 
 export default function App() {
   const [fontLoaded] = useFonts({
@@ -30,15 +30,9 @@ export default function App() {
         backgroundColor="transparent"
         translucent
       />
-      <AuthContext.Provider
-        value={{
-          name: "Carlos",
-          email: "carlos@email.com",
-          avatar: "carlos.png",
-        }}
-      >
+      <AuthProvider>
         <Routes />
-      </AuthContext.Provider>
+      </AuthProvider>
     </Background>
   );
 }
