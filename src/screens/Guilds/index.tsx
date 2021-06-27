@@ -22,30 +22,6 @@ export function Guilds({ handleGuildSelect }: Props) {
       icon: "image.png",
       owner: true,
     },
-    {
-      id: "3",
-      name: "Ak Mestre Fraco",
-      icon: "image.png",
-      owner: true,
-    },
-    {
-      id: "4",
-      name: "Rumo ao global",
-      icon: "image.png",
-      owner: true,
-    },
-    {
-      id: "5",
-      name: "Rumo ao global",
-      icon: "image.png",
-      owner: true,
-    },
-    {
-      id: "6",
-      name: "Rumo ao global",
-      icon: "image.png",
-      owner: true,
-    },
   ];
 
   return (
