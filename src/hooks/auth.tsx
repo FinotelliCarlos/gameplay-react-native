@@ -20,6 +20,7 @@ type User = {
 
 type AuthContextData = {
   user: User;
+  sighIn: () => Promise<void>;
 };
 
 type AuthProviderProps = {
@@ -32,7 +33,7 @@ function AuthProvider({ children }: AuthProviderProps) {
   const [user, setUser] = useState<User>({} as User);
   const [loading, setLoading] = useState(false);
 
-  function SighIn() {
+  async function sighIn() {
     try {
       setLoading(true);
       const authUrl = `
@@ -42,12 +43,16 @@ function AuthProvider({ children }: AuthProviderProps) {
         &response_type=${RESPONSE_TYPE}
         &scope=${SCOPE}
       `;
+
+      console.log(authUrl);
       AuthSession.startAsync({ authUrl });
     } catch (error) {}
   }
 
   return (
-    <AuthContext.Provider value={{ user }}>{children}</AuthContext.Provider>
+    <AuthContext.Provider value={{ user, sighIn }}>
+      {children}
+    </AuthContext.Provider>
   );
 }
 
