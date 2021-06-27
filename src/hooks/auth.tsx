@@ -1,5 +1,13 @@
 import React, { createContext, ReactNode, useContext, useState } from "react";
 import * as AuthSession from "expo-auth-session";
+import {
+  REDIRECT_URI,
+  SCOPE,
+  RESPONSE_TYPE,
+  CLIENT_ID,
+  CDN_IMAGE,
+} from "../config";
+import { api } from "../services/api";
 
 type User = {
   id: string;
@@ -27,9 +35,14 @@ function AuthProvider({ children }: AuthProviderProps) {
   function SighIn() {
     try {
       setLoading(true);
-      AuthSession
-        .startAsync({authUrl})
-        
+      const authUrl = `
+        ${api.defaults.baseURL}
+        /oauth2/authorize?client_id=${CLIENT_ID}
+        &redirect_uri=${REDIRECT_URI}
+        &response_type=${RESPONSE_TYPE}
+        &scope=${SCOPE}
+      `;
+      AuthSession.startAsync({ authUrl });
     } catch (error) {}
   }
 
