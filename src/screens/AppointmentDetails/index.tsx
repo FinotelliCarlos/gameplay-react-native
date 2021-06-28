@@ -113,9 +113,12 @@ export function AppointmentDetails() {
           />
         </>
       )}
-      <View style={styles.footer}>
-        <ButtonIcon onPress={handleOpenGuild} title="entrar na partida" />
-      </View>
+
+      {guildSelected.guild.owner && (
+        <View style={styles.footer}>
+          <ButtonIcon onPress={handleOpenGuild} title="entrar na partida" />
+        </View>
+      )}
     </Background>
   );
 }
