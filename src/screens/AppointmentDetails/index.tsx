@@ -8,6 +8,7 @@ import {
   Share,
   Platform,
 } from "react-native";
+import * as Linking from "expo-linking";
 import { Background } from "../../components/Background";
 import { Header } from "../../components/Header";
 import { BorderlessButton } from "react-native-gesture-handler";
@@ -68,6 +69,10 @@ export function AppointmentDetails() {
     });
   }
 
+  function handleOpenGuild() {
+    Linking.openURL(widget.instant_invite);
+  }
+
   useEffect(() => {
     fetchGuildWidget();
   }, []);
@@ -109,7 +114,7 @@ export function AppointmentDetails() {
         </>
       )}
       <View style={styles.footer}>
-        <ButtonIcon title="entrar na partida" />
+        <ButtonIcon onPress={handleOpenGuild} title="entrar na partida" />
       </View>
     </Background>
   );
